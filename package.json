@@ -1,0 +1,25 @@
+{
+  "name": "msssql-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "build": "echo \"No build step defined\"",
+    "lint": "echo \"No linting step defined\"",
+    "format": "echo \"No formatting step defined\"",
+    "prestart": "echo \"Running prestart script\"",
+    "poststart": "echo \"Running poststart script\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mssql": "^11.0.1",
+    "nodemon": "^3.1.10"
+  }
+}
