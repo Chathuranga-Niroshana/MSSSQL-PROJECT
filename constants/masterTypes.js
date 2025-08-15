@@ -1,0 +1,7 @@
+export const MASTER_TYPES = {
+    ACCOUNT_GROUPS: 1,
+    ACCOUNTS: 2,
+    TRANSACTION: 3,
+    INVENTORY: 4,
+    VENDOR: 5
+}
