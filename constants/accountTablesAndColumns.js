@@ -1,4 +1,3 @@
-import { columns } from "mssql";
 
 export const ACCOUNT_TABLES_COLUMNS = [
     {
@@ -15,8 +14,8 @@ export const ACCOUNT_TABLES_COLUMNS = [
             'CreationTime',
             'ModifiedBy',
             'ModificationTime',
-            'AuthorizedBy',
-            'AuthorizationTime',
+            'AuthorisedBy',
+            'AuthorisationTime',
             'ApprovalStatus',
             'SyncStatus',
             'MasterSeriesGrp',
@@ -32,7 +31,7 @@ export const ACCOUNT_TABLES_COLUMNS = [
     {
         table: 'MasterAddressInfo',
         columns: [
-            'Code',
+            'MasterCode',
             'Address1',
             'Address2',
             'Address3',
