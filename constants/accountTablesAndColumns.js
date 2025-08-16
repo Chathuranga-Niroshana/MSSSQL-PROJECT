@@ -150,5 +150,15 @@ export const ACCOUNT_TABLES_COLUMNS = [
             'Image2', // { type: "Image", "Origin": "dnwanljdwjj12382" }
             'FormatType2', // Image format type (e.g., 'png', 'jpg')
         ]
+    },
+    {
+        table: 'Help2',
+        columns: [
+            'Code',
+            'ReqType1',
+            'ReqType2',
+            'ReqType3',
+            'Name'
+        ]
     }
 ]
