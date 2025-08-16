@@ -77,19 +77,19 @@ export const ACCOUNT_TABLES_COLUMNS = [
         table: 'Help1',
         columns: [
             'Code',
-            'ReqType',
+            'RecType',
             'NameAlias',
             'NameOrAlias',  // if 1 NameAlias is acc name, if 2 it is alias
             'MasterType',
             'AdditionalInfo',
-            'ParentGrp',   // Account Group
+            'ParentGroup',   // Account Group
             'MasterSeries',
             'Status',
             'DefaultMCCode'
         ]
     },
     {
-        table: 'MasterFootPrint',
+        table: 'MastFootPrint',
         columns: [
             'Name',
             'MasterCode',
@@ -143,21 +143,21 @@ export const ACCOUNT_TABLES_COLUMNS = [
     {
         table: 'Images',
         columns: [
+            'Type',
             'Code',
-            'Image1', // { type: "Image", "Origin": "dnwanljdwjj12381" }
+            'Image1', // { type: "Image", "data": "dnwanljdwjj12381" }
             'FormatType1', // Image format type (e.g., 'png', 'jpg')
-            'Image2', // { type: "Image", "Origin": "dnwanljdwjj12382" }
+            'Image2', // { type: "Image", "data": "dnwanljdwjj12382" }
             'FormatType2', // Image format type (e.g., 'png', 'jpg')
         ]
     },
-    {
-        table: 'Help2',
-        columns: [
-            'Code',
-            'ReqType1',
-            'ReqType2',
-            'ReqType3',
-            'Name'
-        ]
-    }
+    // {
+    //     table: 'Help2',
+    //     columns: [
+    //         'ReqType1',
+    //         'ReqType2',
+    //         'ReqType3',
+    //         'Name'
+    //     ]
+    // }
 ]

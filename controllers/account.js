@@ -17,12 +17,12 @@ export const getAccountByCodeData = async (req, res) => {
     const { code } = req.params;
     try {
         const data = await getAccountByCode(code)
-        if (data.recordset.length === 0) {
+        if (!data) {
             return res.status(404).json({ error: 'Account not found' });
         }
-        res.status(200).json(data.recordset[0]);
+        res.status(200).json(data);
     } catch (error) {
-        res.status(500).json({ error: 'Error retrieving account' });
+        res.status(500).json({ error: 'Error retrieving account', errorData: error });
         console.error('Error retrieving account:', error);
     }
 }
