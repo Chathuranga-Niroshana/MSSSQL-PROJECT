@@ -9,6 +9,63 @@ export const getAllAccounts = async () => {
     return accounts
 }
 
+export const getAccountMaster1Data = async (code) => {
+    const query = `SELECT ${ACCOUNT_TABLES_COLUMNS[0].columns.join(', ')} FROM Master1 WHERE Code = @Code`;
+    const result = await pool.request()
+        .input("Code", code)
+        .query(query);
+    return result.recordset[0];
+}
+
+export const getAccountAddressInfoData = async (code) => {
+    const query = `SELECT ${ACCOUNT_TABLES_COLUMNS[1].columns.join(', ')} FROM MasterAddressInfo WHERE MasterCode = @Code`;
+    const result = await pool.request()
+        .input("Code", code)
+        .query(query);
+    return result.recordset[0];
+}
+export const getAccountHelp1Data = async (code) => {
+    const query = `SELECT ${ACCOUNT_TABLES_COLUMNS[2].columns.join(', ')} FROM Help1 WHERE Code = @Code`;
+    const result = await pool.request()
+        .input("Code", code)
+        .query(query);
+    return result.recordset[0];
+}
+
+export const getAccountFootPrintData = async (code) => {
+    const query = `SELECT ${ACCOUNT_TABLES_COLUMNS[3].columns.join(', ')} FROM MastFootPrint WHERE MasterCode = @Code`;
+    const result = await pool.request()
+        .input("Code", code)
+        .query(query);
+    return result.recordset[0];
+}
+export const getAccountHelp1AddNInfoData = async (code) => {
+    const query = `SELECT ${ACCOUNT_TABLES_COLUMNS[4].columns.join(', ')} FROM Help1AddnInfo WHERE Code = @Code`;
+    const result = await pool.request()
+        .input("Code", code)
+        .query(query);
+    return result.recordset[0];
+}
+export const getAccountFolio1Data = async (code) => {
+    const query = `SELECT ${ACCOUNT_TABLES_COLUMNS[5].columns.join(', ')} FROM Folio1 WHERE MasterCode = @Code`;
+    const result = await pool.request()
+        .input("Code", code)
+        .query(query);
+    return result.recordset[0];
+}
+export const getAccountImagesData = async (code) => {
+    const query = `SELECT ${ACCOUNT_TABLES_COLUMNS[6].columns.join(', ')} FROM Images WHERE Code = @Code`;
+    const result = await pool.request()
+        .input("Code", code)
+        .query(query);
+    return result.recordset[0];
+}
+
+
+
+
+
+
 export const getAccountByCode = async (code) => {
     const query = `
         SELECT 
