@@ -88,7 +88,7 @@ export const ACCOUNT_TABLES_COLUMNS = [
             'DefaultMCCode'
         ]
     },
-    {
+    {      // do not create
         table: 'MastFootPrint',
         columns: [
             'Name',
@@ -99,7 +99,7 @@ export const ACCOUNT_TABLES_COLUMNS = [
             'RemainFP',
         ]
     },
-    {
+    {          // do not create
         table: 'Help1AddnInfo',
         columns: [  // there are 2 rows (or more) for each account. 1 has NameAlias and 1 has NameOrAlias 2 
             'Code',
