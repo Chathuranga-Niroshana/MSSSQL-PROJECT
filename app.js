@@ -6,6 +6,7 @@ import { companyRegistryPool } from "./config/companyRegistryDb.js";
 import { companyOperationPool } from "./config/companyOperationsDb.js";
 import companyRouter from "./routes/company.js";
 import accountRouter from "./routes/account.js"
+import accountGroupRouter from "./routes/accountGroup.js"
 
 const app = express();
 app.use(express.json());
@@ -21,5 +22,6 @@ await companyOperationPool()
 
 app.use('/api/company', companyRouter);
 app.use('/api/account', accountRouter);
+app.use('/api/account_group', accountGroupRouter);
 
 export default app;
